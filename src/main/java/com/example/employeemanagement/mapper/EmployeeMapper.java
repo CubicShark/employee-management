@@ -1,7 +1,6 @@
 package com.example.employeemanagement.mapper;
 
-import com.example.employeemanagement.dto.EmployeeRequest;
-import com.example.employeemanagement.dto.EmployeeResponse;
+import com.example.employeemanagement.dto.EmployeeDto;
 import com.example.employeemanagement.entity.Employee;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;
@@ -9,7 +8,7 @@ import org.mapstruct.MappingConstants;
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface EmployeeMapper {
 
-    EmployeeResponse toDto(Employee employee);
+    EmployeeDto toDto(Employee employee);
 
-    Employee toEntity(EmployeeRequest employeeRequest);
+    Employee toEntity(EmployeeDto employeeDto);
 }

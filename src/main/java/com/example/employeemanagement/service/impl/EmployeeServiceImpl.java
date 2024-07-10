@@ -1,7 +1,6 @@
 package com.example.employeemanagement.service.impl;
 
-import com.example.employeemanagement.dto.EmployeeRequest;
-import com.example.employeemanagement.dto.EmployeeResponse;
+import com.example.employeemanagement.dto.EmployeeDto;
 import com.example.employeemanagement.entity.Employee;
 import com.example.employeemanagement.entity.Role;
 import com.example.employeemanagement.entity.enums.RoleName;
@@ -28,7 +27,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private final PasswordEncoder passwordEncoder;
 
     @Override
-    public EmployeeResponse createEmployee(EmployeeRequest employeeRequest) {
+    public EmployeeDto createEmployee(EmployeeDto employeeRequest) {
         Employee employee = employeeMapper.toEntity(employeeRequest);
 
         employee.setPassword(passwordEncoder.encode(employeeRequest.password()));

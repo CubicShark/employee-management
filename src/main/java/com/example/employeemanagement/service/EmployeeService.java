@@ -1,9 +1,8 @@
 package com.example.employeemanagement.service;
 
-import com.example.employeemanagement.dto.EmployeeRequest;
-import com.example.employeemanagement.dto.EmployeeResponse;
+import com.example.employeemanagement.dto.EmployeeDto;
 
 public interface EmployeeService {
 
-    EmployeeResponse createEmployee(EmployeeRequest employeeRequest);
+    EmployeeDto createEmployee(EmployeeDto employeeDto);
 }
