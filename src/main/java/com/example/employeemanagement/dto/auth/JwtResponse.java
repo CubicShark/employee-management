@@ -1,12 +1,10 @@
 package com.example.employeemanagement.dto.auth;
 
-import lombok.Data;
+public record JwtResponse (
 
-@Data
-public class JwtResponse {
-
-    private Long id;
-    private String username;
-    private String accessToken;
-    private String refreshToken;
+    Long id,
+    String username,
+    String accessToken,
+    String refreshToken
+) {
 }
